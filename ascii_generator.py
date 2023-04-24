@@ -33,7 +33,7 @@ def get_ascii_chars():
         print("Do you want to customize the ASCII character set? (y/n)")
         response = input().lower()
         if response == "y":
-            ascii_chars = input("Enter the new set of ASCII characters: ")
+            ascii_chars = list(input("Enter the new set of ASCII characters: "))
             if len(ascii_chars) < 2:
                 print("The ASCII character set must have at least 2 characters.")
                 continue
