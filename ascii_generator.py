@@ -115,7 +115,7 @@ def main():
     # we need to downscale the image by a factor of [scale] in width and [scale]*2 in height
     width, height = img.size
     # ask the user for the downscale factor
-    print("Enter the downscale factor (1 ~ 10, 5 highly recommended.): ")
+    print("Enter the downscale factor (1 ~ 10, 5 for default.): ")
     try:
         scale = int(input())
         if scale < 1 or scale > 10:
