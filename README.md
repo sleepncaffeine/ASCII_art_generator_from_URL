@@ -13,4 +13,4 @@ example:
 [result](https://github.com/sleepncaffeine/ASCII_art_generator_from_links/blob/main/outputs/2_person_camera.txt)
 <img src="https://user-images.githubusercontent.com/101965838/233942801-9e14ad1a-ab8d-4391-a3eb-7de4b315dc69.png"></img>
 
-(results may vary depending on the font, I use [D2coding](https://github.com/naver/d2codingfont))
+(results may vary depending on the font and downscale factor, I use [D2coding](https://github.com/naver/d2codingfont))
