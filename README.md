@@ -7,3 +7,5 @@ examples:
 
 into
 <img src="https://user-images.githubusercontent.com/101965838/233942801-9e14ad1a-ab8d-4391-a3eb-7de4b315dc69.png"></img>
+
+(result may vary depending on the font)
