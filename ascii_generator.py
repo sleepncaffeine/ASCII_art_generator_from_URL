@@ -122,6 +122,7 @@ def main():
             print("Invalid downscale factor, using the default value (5).")
             scale = 5
     except:
+        print("Invalid downscale factor, using the default value (5).")
         scale = 5
     img = img.resize((int(width / scale), int(height / (scale * 2))))
 
