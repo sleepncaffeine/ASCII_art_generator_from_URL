@@ -1,4 +1,4 @@
-# ASCII_art_generator_from_links
+# ASCII art generator from URL
 
 
 This python codes generates ASCII art from image links on the web. (program input should be image URL)<br>
