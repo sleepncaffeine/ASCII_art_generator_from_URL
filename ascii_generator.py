@@ -148,6 +148,7 @@ def main():
     filename = input("Enter the filename to save the ASCII art: ")
     with open("outputs/" + filename + ".txt", "w") as file:
         file.write(ascii_img)
+        file.write("source: " + url)
 
     print(f"The ASCII art has been saved to {filename}.")
 
