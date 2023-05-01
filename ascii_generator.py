@@ -33,11 +33,14 @@ def get_ascii_chars():
         print("Do you want to customize the ASCII character set? (y/n)")
         response = input().lower()
         if response == "y":
-            ascii_chars = list(input("Enter the new set of ASCII characters: "))
-            if len(ascii_chars) < 2:
-                print("The ASCII character set must have at least 2 characters.")
-                continue
-            break
+            try:
+                ascii_chars = list(input("Enter the new set of ASCII characters: "))
+                if len(ascii_chars) < 2:
+                    print("The ASCII character set must have at least 2 characters.")
+                    continue
+                break
+            except:
+                print("Invalid response, please try again.")
         elif response == "n":
             break
         else:
@@ -163,6 +166,7 @@ def main():
     print("The file will be saved to the 'outputs' folder.")
     print("The file extension(.txt) will be added automatically.")
     filename = input("Enter: ")
+
     with open("outputs/" + filename + ".txt", "w") as file:
         file.write(ascii_img)
         file.write("image source: " + url)
