@@ -45,8 +45,10 @@ def get_ascii_chars():
 
     # Ask the user if they want to reverse the ASCII character set
     while True:
-        print("Do you want to reverse the ASCII character set? (y/n)")
-        print("If you don't use dark mode, you should reverse the ASCII character set.")
+        print("Do you want to reverse the ASCII character set?")
+        print(
+            "If you don't use dark mode, you should reverse the ASCII character set. (y/n)"
+        )
         response = input().lower()
         if response == "y":
             ascii_chars = ascii_chars[::-1]
@@ -63,14 +65,19 @@ def get_ascii_chars():
 def convert_to_ascii(img, ascii_chars):
     ascii_img = ""
     pixels = img.load()
+
     for y in range(img.height):
         for x in range(img.width):
             r, g, b = pixels[x, y]
+
             brightness = int((r + g + b) / 3)
             char_index = int(brightness / (255 / len(ascii_chars)))
+
             if char_index == len(ascii_chars):
                 char_index -= 1
+
             ascii_img += ascii_chars[char_index]
+
         ascii_img += "\n"
 
     return ascii_img
@@ -135,13 +142,19 @@ def main():
     print(ascii_img)
 
     # Apply a color filter to the image
-    print("Do you want to apply a color filter to the image? (y/n)")
-    response = input().lower()
-    if response == "y":
-        print("Which color filter do you want to apply? (red/green/blue)")
-        color = input().lower()
-        img = apply_color_filter(img, color)
-        img.show()
+    while True:
+        print("Do you want to apply a color filter to the image?")
+        print("The filtered image will be showed in a new window. (y/n)")
+        try:
+            response = input().lower()
+            if response == "y":
+                print("Which color filter do you want to apply? (red/green/blue)")
+                color = input().lower()
+                img = apply_color_filter(img, color)
+                img.show()
+                break
+        except:
+            print("Invalid response, please try again.")
 
     # Save the ASCII art to a text file
     # filename should not include the file extension
