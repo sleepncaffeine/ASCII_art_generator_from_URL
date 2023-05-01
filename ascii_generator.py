@@ -159,10 +159,13 @@ def main():
     # Save the ASCII art to a text file
     # filename should not include the file extension
     # the file extension(.txt) will be added automatically
-    filename = input("Enter the filename to save the ASCII art: ")
+    print("Enter the filename to save the ASCII art.")
+    print("The file will be saved to the 'outputs' folder.")
+    print("The file extension(.txt) will be added automatically.")
+    filename = input("Enter: ")
     with open("outputs/" + filename + ".txt", "w") as file:
         file.write(ascii_img)
-        file.write("source: " + url)
+        file.write("image source: " + url)
 
     print(f"The ASCII art has been saved to {filename}.")
 
