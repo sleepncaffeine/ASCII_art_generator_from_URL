@@ -46,6 +46,7 @@ def get_ascii_chars():
     # Ask the user if they want to reverse the ASCII character set
     while True:
         print("Do you want to reverse the ASCII character set? (y/n)")
+        print("If you don't use dark mode, you should reverse the ASCII character set.")
         response = input().lower()
         if response == "y":
             ascii_chars = ascii_chars[::-1]
