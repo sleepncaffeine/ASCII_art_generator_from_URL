@@ -156,6 +156,8 @@ def main():
                 img = apply_color_filter(img, color)
                 img.show()
                 break
+            elif response == "n":
+                break
         except:
             print("Invalid response, please try again.")
 
